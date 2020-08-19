@@ -43,9 +43,6 @@ ground.x = ground.width / 2;
   if (keyIsDown(32)) {
     Monkey.velocityY = -30;  
   } 
-  if(mousePressedOver(Button)) {
-   Monkey.velocityY = -30;
-  }
   Monkey.velocityY = Monkey.velocityY + 2;
   Monkey.collide(ground)
 background(220);

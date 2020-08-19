@@ -24,7 +24,7 @@ function Rock() {
 }
 function setup() {
   Bananation();
-  Button = createSprite(400,400,30,30);
+  Button = createSprite(400,400,50,50);
   createCanvas(400,400);
   ground = createSprite(5,400,800,30);
   Monkey = createSprite(0,400,30,30);  

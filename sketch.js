@@ -1,5 +1,5 @@
 var surivalTime = 0;
-var Monkey,monkeyPic,ground, Banana,BananaPic, BananaGroup, Obstacle,ObstaclePic, ObstacleGroup;
+var Monkey,monkeyPic,ground, Banana,BananaPic, BananaGroup, Obstacle,ObstaclePic, ObstacleGroup,Button;
 function preload() {
 monkeyPic = loadImage("Monkey.png");
 BananaPic = loadImage("bna.PNG");
@@ -24,6 +24,7 @@ function Rock() {
 }
 function setup() {
   Bananation();
+  Button = createSprite(400,400,30,30);
   createCanvas(400,400);
   ground = createSprite(5,400,800,30);
   Monkey = createSprite(0,400,30,30);  
@@ -43,6 +44,9 @@ ground.x = ground.width / 2;
   if (keyIsDown(32)) {
     Monkey.velocityY = -30;  
   } 
+  if(mousePressedOver(Button)) {
+   Monkey.velocityY = -30;
+  }
   Monkey.velocityY = Monkey.velocityY + 2;
   Monkey.collide(ground)
 background(220);
